@@ -220,12 +220,8 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
   link,
   defaultOptions: {
-    query: {
-      fetchPolicy: "network-only"
-    },
     watchQuery: {
       fetchPolicy: "cache-and-network",
-      nextFetchPolicy: "cache-first"
     }
   }
 });
